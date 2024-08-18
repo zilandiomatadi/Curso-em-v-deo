@@ -2,35 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
-sriracha-regular {
-    font-family: "Sriracha", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
-passion-one-regular {
-    font-family: "Passion One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .passion-one-bold {
-    font-family: "Passion One", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .passion-one-black {
-    font-family: "Passion One", sans-serif;
-    font-weight: 900;}
+    :root {
+        --fonte1:Verdana,Geneva,Tahoma,sans-serif;
+        --fonte2:'Passion One', sans-serif;
+        --fonte3:'Sriracha', cursive;
+    }
     
 *{
     margin: 0px;
     padding: 0px;
 }
 html,body{
+    font-family: var(--fonte1);
     min-height: 100vh;
     background-color: darkgray;
 }
@@ -40,8 +24,10 @@ header{
     text-align: center;
 }
 header > h1{
+    font-family: var(--fonte2);
     padding-top: 50px;
     font-variant:small-caps ;
+    font-size: 10vw;
 }
 header >p{
     padding-bottom: 50px;
@@ -67,6 +53,11 @@ section{
     padding-bottom: 10vh;
     padding-left: 30px;
     line-height: 2em;
+    font-family: var(--fonte3);
+    font-size: 3vw;
+}
+section > p{
+    padding-bottom: 5em;
 }
 section.normal{
     background-color: white;
@@ -75,10 +66,24 @@ section.normal{
 section.imagem{
     background-color: rgb(51, 51, 51);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.479);
+    background-attachment: fixed;
 }
 section.imagem > p{
-    width: 400px;
+    display: inline-block;
     background-color: rgba(0, 0, 0, 0.253);
+    text-shadow: 1px 1px 0px black;
+    padding-bottom: 15px;
+}
+
+section#img01{
+ background-image: url('imgparallax/background001.jpg');
+ background-position: right center;
+ background-size: cover;
+}
+section#img02{
+    background-image: url('imgparallax/background002.jpg');
+    background-size: cover;
 }
 footer{
     background-color: black;
